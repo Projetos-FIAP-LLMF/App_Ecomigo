@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Ecomigo</string>
+    <string name="form_text">
+        Pedimos que você reserve alguns minutos para responder a este formulário. Suas respostas serão muito importantes para análises futuras e ajudarão a melhorar a conscientização sobre reciclagem. Agradecemos sua colaboração!
+    </string>
+    <string name="form_titulo1">
+        Pesquisa
+    </string>
+    <string name="form_titulo2">
+        Hábitos de Reciclagem
+    </string>
+    <string name="lixeira">Lixeira</string>
+    <string name="voltar">
+        Voltar
+    </string>
+</resources>
