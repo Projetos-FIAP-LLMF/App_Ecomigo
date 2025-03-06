@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecomigo"
         tools:targetApi="31">
+        <activity android:name=".SurveyActivity" />
+        <activity android:name=".SustainableActivity" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
