@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ecomigo"
+    namespace = "br.com.fiap.telainicial"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.ecomigo"
-        minSdk = 24
+        applicationId = "br.com.fiap.telainicial"
+        minSdk = 27
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -49,8 +49,6 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

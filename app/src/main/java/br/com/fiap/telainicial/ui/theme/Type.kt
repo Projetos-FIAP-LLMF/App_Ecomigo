@@ -1,4 +1,4 @@
-package com.example.ecomigo.ui.theme
+package br.com.fiap.telainicial.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

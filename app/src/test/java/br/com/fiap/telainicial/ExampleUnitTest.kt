@@ -1,4 +1,4 @@
-package com.example.ecomigo
+package br.com.fiap.telainicial
 
 import org.junit.Test
 

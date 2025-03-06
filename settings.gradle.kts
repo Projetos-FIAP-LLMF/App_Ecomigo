@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Ecomigo"
+rootProject.name = "TelaInicial"
 include(":app")
