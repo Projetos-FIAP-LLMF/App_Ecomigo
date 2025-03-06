@@ -63,7 +63,7 @@ fun RecyclingAppUI() {
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = "Reciclar",
-            fontSize = 24.sp,
+            fontSize = 34.sp,
             fontWeight = FontWeight.Bold,
             color = Color(0xFF98CD5F),
             fontFamily = FontFamily.Default
@@ -97,7 +97,9 @@ fun RecyclingAppUI() {
             },
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF009951)),
             shape = RoundedCornerShape(8.dp),
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 20.dp),
         ) {
             Text(text = "Começar", color = Color.White, fontSize = 16.sp)
         }
