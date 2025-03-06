@@ -1,5 +1,6 @@
 package com.example.ecomigo
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,6 +22,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.platform.LocalContext
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +35,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun RecyclingAppUI() {
+    val context = LocalContext.current
     val gradientBrush = Brush.linearGradient(
         colors = listOf(
             Color(0xFFCFEFC1),
@@ -89,9 +92,8 @@ fun RecyclingAppUI() {
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             onClick = {
-                // TELA DA LA
-                // val intent = Intent(context, SurveyActivity::class.java)
-                //  context.startActivity(intent)
+                 val intent = Intent(context, GuiaReciclagemActivity::class.java)
+                  context.startActivity(intent)
             },
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF009951)),
             shape = RoundedCornerShape(8.dp),
