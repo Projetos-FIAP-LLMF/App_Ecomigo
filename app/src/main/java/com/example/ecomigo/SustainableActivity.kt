@@ -134,7 +134,7 @@ fun SustainableScreen() {
 
         Button(
             onClick = {
-                val intent = Intent(context, SurveyActivity::class.java)
+                val intent = Intent(context, SearchActivity::class.java)
                 context.startActivity(intent)
             },
             modifier = Modifier
