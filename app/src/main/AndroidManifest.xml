@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecomigo"
         tools:targetApi="31">
-        <activity android:name=".SurveyActivity" />
+        <activity android:name=".SearchActivity" />
         <activity android:name=".SustainableActivity" />
-        <activity android:name=".GuiaReciclagemActivity" />
         <activity android:name=".RecyclingGuide" />
+        <activity android:name=".ApimapsActivity" />
 
         <activity
             android:name=".MainActivity"

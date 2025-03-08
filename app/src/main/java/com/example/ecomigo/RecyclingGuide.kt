@@ -1,5 +1,6 @@
 package com.example.ecomigo
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -8,8 +9,10 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -52,11 +55,9 @@ fun GuiaReciclagemScreen() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        // Títulos
         Text("Guia de", fontSize = 30.sp, color = Color.Gray, fontWeight = FontWeight.SemiBold)
         Text("Reciclagem", fontSize = 30.sp, color = Color(0xFF4CAF50), fontWeight = FontWeight.Bold)
 
-        // Subtítulo
         Text(
             "Escolha um tipo de Reciclagem",
             fontSize = 18.sp,
@@ -65,7 +66,6 @@ fun GuiaReciclagemScreen() {
             modifier = Modifier.padding(top = 21.dp, bottom = 16.dp)
         )
 
-        // Lixeiras - Primeira linha
         Row(Modifier.padding(top = 16.dp)) {
             LixeiraItem(R.drawable.papel) { descricao = getDescricaoPapel() }
             LixeiraItem(R.drawable.vidro) { descricao = getDescricaoVidro() }
@@ -73,7 +73,6 @@ fun GuiaReciclagemScreen() {
             LixeiraItem(R.drawable.metal) { descricao = getDescricaoMetal() }
         }
 
-        // Lixeiras - Segunda linha
         Row(Modifier.padding(top = 14.dp)) {
             LixeiraItem(R.drawable.organico) { descricao = getDescricaoOrganico() }
             LixeiraItem(R.drawable.nao_reciclavel) { descricao = getDescricaoNaoReciclavel() }
@@ -91,12 +90,18 @@ fun GuiaReciclagemScreen() {
                 .padding(12.dp)
         )
 
-        // Botão de pontos de coleta
         Button(
-            onClick = { /* Navegar para pontos de coleta */ },
-            modifier = Modifier.padding(top = 16.dp)
+            onClick = {
+                val intent = Intent(context, ApimapsActivity::class.java)
+                context.startActivity(intent)
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 32.dp),
+            shape = RoundedCornerShape(8.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6AA84F))
         ) {
-            Text("Pontos de Coleta")
+            Text("Pontos de coleta", color = Color.White)
         }
     }
 }
