@@ -92,7 +92,7 @@ fun RecyclingAppUI() {
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             onClick = {
-                 val intent = Intent(context, GuiaReciclagemActivity::class.java)
+                 val intent = Intent(context, RecyclingGuide::class.java)
                   context.startActivity(intent)
             },
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF009951)),

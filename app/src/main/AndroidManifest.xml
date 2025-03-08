@@ -15,6 +15,7 @@
         <activity android:name=".SurveyActivity" />
         <activity android:name=".SustainableActivity" />
         <activity android:name=".GuiaReciclagemActivity" />
+        <activity android:name=".RecyclingGuide" />
 
         <activity
             android:name=".MainActivity"
