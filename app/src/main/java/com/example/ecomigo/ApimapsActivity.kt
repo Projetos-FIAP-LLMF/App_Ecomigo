@@ -6,9 +6,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.google.android.gms.maps.model.CameraPosition
@@ -25,7 +27,6 @@ class ApimapsActivity : ComponentActivity() {
             MaterialTheme {
                 MapScreen()
 
-               // ButtonScreen()
             }
         }
     }
@@ -46,6 +47,21 @@ fun MapScreen() {
             title = "São Paulo",
             snippet = "Cidade maravilhosa"
         )
+    }
+    val context = LocalContext.current
+
+    Button(
+        onClick = {
+            val intent = Intent(context, SustainableActivity::class.java)
+            context.startActivity(intent)
+        },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 32.dp),
+        shape = RoundedCornerShape(8.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6AA84F))
+    ) {
+        Text("Ver Dicas", color = Color.White)
     }
 }
 
