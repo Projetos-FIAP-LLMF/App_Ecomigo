@@ -62,8 +62,8 @@ fun SearchScreen() {
 
             Text(
                 text = "Pesquisa:",
-                fontSize = 30.sp,
-                fontWeight = FontWeight.Light,
+                fontSize = 28.sp,
+                fontWeight = FontWeight.SemiBold,
                 color = Color(0xFF3D3D3D)
             )
 

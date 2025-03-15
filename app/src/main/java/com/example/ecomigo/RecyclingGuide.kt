@@ -56,14 +56,14 @@ fun GuiaReciclagemScreen() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        Text("Guia de", fontSize = 30.sp, color = Color.Gray, fontWeight = FontWeight.SemiBold)
-        Text("Reciclagem", fontSize = 30.sp, color = Color(0xFF4CAF50), fontWeight = FontWeight.Bold)
+        Text("Guia de", fontSize = 28.sp, color = Color(0xFF3D3D3D), fontWeight = FontWeight.SemiBold)
+        Text("Reciclagem", fontSize = 32.sp, color = Color(0xFF4CAF50), fontWeight = FontWeight.Bold)
 
         Text(
             "Escolha um tipo de Reciclagem",
-            fontSize = 18.sp,
-            color = Color(0xFF388E3C),
-            fontWeight = FontWeight.SemiBold,
+            fontSize = 17.sp,
+            color = Color(0xFF2E5545),
+            fontWeight = FontWeight.Medium,
             modifier = Modifier.padding(top = 21.dp, bottom = 16.dp)
         )
 
@@ -79,16 +79,16 @@ fun GuiaReciclagemScreen() {
             LixeiraItem(R.drawable.nao_reciclavel) { descricao = getDescricaoNaoReciclavel() }
         }
 
-        // Caixa de descrição
         Text(
             descricao,
             fontSize = 14.sp,
             color = Color.Gray,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 18.dp)
+                .padding(top = 21.dp)
+                .padding(bottom = 15.dp)
                 .background(Color.White)
-                .padding(10.dp)
+                .padding(12.dp)
         )
 
         val context = LocalContext.current

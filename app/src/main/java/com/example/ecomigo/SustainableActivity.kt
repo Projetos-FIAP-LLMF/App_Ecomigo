@@ -8,7 +8,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -61,7 +60,7 @@ fun SustainableScreen() {
         Text(
             text = "no seu dia a dia",
             fontSize = 26.sp,
-            fontWeight = FontWeight.Light,
+            fontWeight = FontWeight.SemiBold,
             color = Color(0xFF3D3D3D)
         )
 
@@ -69,7 +68,7 @@ fun SustainableScreen() {
 
         Text(
             text = "Veja dicas de como ser mais sustentável no seu dia a dia",
-            fontSize = 16.sp,
+            fontSize = 17.sp,
             fontWeight = FontWeight.Medium,
             color = Color(0xFF2E5545),
             textAlign = TextAlign.Center,
@@ -145,6 +144,22 @@ fun SustainableScreen() {
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6AA84F))
         ) {
             Text("Responder Pesquisa", color = Color.White)
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(
+            onClick = {
+                val intent = Intent(context, ApimapsActivity::class.java)
+                context.startActivity(intent)
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 32.dp),
+            shape = RoundedCornerShape(8.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6AA84F))
+        ) {
+            Text("Voltar", color = Color.White)
         }
     }
 }

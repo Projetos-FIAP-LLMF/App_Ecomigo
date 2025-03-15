@@ -71,7 +71,7 @@ fun RecyclingAppUI() {
         Text(
             text = "nunca foi tão divertido",
             fontSize = 20.sp,
-            color = Color.DarkGray
+            color = Color(0xFF2E5545)
         )
         Spacer(modifier = Modifier.height(16.dp))
         Box(
