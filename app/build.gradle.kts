@@ -64,7 +64,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation ("com.google.maps.android:maps-compose:2.11.4")
+    implementation ("com.google.android.libraries.places:places:3.3.0")
     implementation ("com.google.android.gms:play-services-maps:18.1.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation ("com.google.android.gms:play-services-location:21.0.1")
     implementation ("com.google.android.libraries.places:places:3.3.0")
 
